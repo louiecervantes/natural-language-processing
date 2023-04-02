@@ -24,6 +24,18 @@ def app():
             Let genius bridge the earth And boundless sky. \
             Set the youth to task half begun, \
             Seek their rightful place ‘neath the sun.')
+    
+    with st.echo(code_location='below'):
+        # Create a multiline text field
+        user_input = st.text_area('Paste the block of text here', height=10)
+
+        # Display the text when the user submits the form
+        if st.button('Submit'):
+            #Tokenizing
+            sentence_tokens = word_tokenize(sentences)
+            st.write(sentence_tokens)
+            
+    
 
  
 # run the app
