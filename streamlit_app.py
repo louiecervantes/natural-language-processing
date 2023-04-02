@@ -110,7 +110,7 @@ def app():
             lemmatizer = WordNetLemmatizer()
             words_to_stem = ['cats', 'cacti', 'geese']
             for i in words_to_stem:
-              print(i + ':' + lemmatizer.lemmatize(i))
+              st.write(i + ':' + lemmatizer.lemmatize(i))
          
 
  
