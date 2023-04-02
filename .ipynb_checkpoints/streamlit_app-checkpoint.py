@@ -117,7 +117,6 @@ def app():
     from nltk.stem import wordnet
     from nltk.stem import WordNetLemmatizer
     lemmatizer = WordNetLemmatizer()
-    lemmatizer = WordNetLemmatizer()
     # Get the user input
     user_input = st.text_input("Enter a word to lemmatize")
     if st.button("Lemmatize"):
