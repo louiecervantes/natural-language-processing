@@ -42,10 +42,12 @@ def app():
             sentence_tokens = word_tokenize(user_input)
             st.write(sentence_tokens)
             
+            st.write('The list of tokens')
             #checking the type and number of tokens
             output = type(sentence_tokens), len(sentence_tokens)
             st.write(output)
             
+            st.write('frequency of tokens')
             #freuency of tokens
             from nltk.probability import FreqDist
             fdist = FreqDist()
@@ -53,7 +55,8 @@ def app():
             for i in sentence_tokens:
                 fdist[i] = fdist[i] + 1
             st.write(fdist)    
-           
+          
+            st.write('The top 10 most frequent tokens')
             #Ten most common token
             top_10 = fdist.most_common(10)
             st.write(top_10)
