@@ -32,7 +32,7 @@ def app():
         # Display the text when the user submits the form
         if st.button('Submit'):
             #Tokenizing
-            sentence_tokens = word_tokenize(sentences)
+            sentence_tokens = word_tokenize(user_input)
             st.write(sentence_tokens)
             
     
