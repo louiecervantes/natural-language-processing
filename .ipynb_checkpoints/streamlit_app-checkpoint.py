@@ -4,7 +4,6 @@ import altair as alt
 import nltk
 import nltk.corpus
 nltk.download('punkt')
-from nltk.tokenize import word_tokenize  
 
 # Define the Streamlit app
 def app():
@@ -66,6 +65,7 @@ def app():
         if st.button('bigrams, trigrams. ngrams'):
             #Tokens
             st.write('The list of tokens')
+            from nltk.tokenize import word_tokenize
             sentence_tokens = word_tokenize(user_input)
             st.write(sentence_tokens)
             
