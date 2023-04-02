@@ -31,8 +31,8 @@ def app():
               that is easy to understand. It supports multiple programming paradigms, \
               including procedural, object-oriented, and functional programming')
     
-        # Create a multiline text field
-        user_input = st.text_area('Paste the block of text here', height=10)
+    # Create a multiline text field
+    user_input = st.text_area('Paste the block of text here', height=10)
         
     with st.echo(code_location='below'):
         if st.button('Submit'):
