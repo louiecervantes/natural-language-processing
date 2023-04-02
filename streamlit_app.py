@@ -38,11 +38,12 @@ def app():
         # Display the text when the user submits the form
         if st.button('Submit'):
             #Tokenizing
+            st.write('The list of tokens')
             from nltk.tokenize import word_tokenize   
             sentence_tokens = word_tokenize(user_input)
             st.write(sentence_tokens)
             
-            st.write('The list of tokens')
+
             #checking the type and number of tokens
             output = type(sentence_tokens), len(sentence_tokens)
             st.write(output)
