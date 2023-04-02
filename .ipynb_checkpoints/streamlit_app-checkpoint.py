@@ -1,4 +1,6 @@
 #Input the relevant libraries
+import streamlit as st
+import altair as alt
 import nltk
 import nltk.corpus
 from nltk.tokenize import word_tokenize
