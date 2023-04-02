@@ -9,7 +9,7 @@ nltk.download('punkt')
 # Define the Streamlit app
 def app():
     
-    st.title("Welcome to the NLP in a Nutshell")     
+    st.title("Welcome to NLP in a Nutshell")     
     st.subheader("(c) 2023 Louie F. Cervantes M. Eng.")
                  
     st.write("This App demonstrates various concepts in Natural Language Processing")
@@ -100,7 +100,18 @@ def app():
         output = pst.stem(user_input)
         st.write(output)
 
-    
+    st.subheader('Lemmatization')
+    with st.echo(code_location='below'): 
+        output = ''
+        if st.button('Lemmatization'):
+            #lemmatization
+            from nltk.stem import wordnet
+            from nltk.stem import WordNetLemmatizer
+            lemmatizer = WordNetLemmatizer()
+            words_to_stem = ['cats', 'cacti', 'geese']
+            for i in words_to_stem:
+              print(i + ':' + lemmatizer.lemmatize(i))
+         
 
  
 # run the app
