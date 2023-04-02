@@ -102,7 +102,7 @@ def app():
 
     st.subheader('Lemmatization')
 
-        output = ''
+    output = ''
         if st.button('Lemmatization'):
             with st.echo(code_location='below'): 
             #lemmatization
