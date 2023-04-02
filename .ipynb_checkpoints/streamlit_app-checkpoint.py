@@ -63,7 +63,7 @@ def app():
 
     st.subheader('tokens, bigrams, trigrams and ngrams')
     with st.echo(code_location='below'): 
-        if st.button('Submit'):
+        if st.button('bigrams, trigrams. ngrams'):
             #Tokens
             st.write('The list of tokens')
             sentence_tokens = word_tokenize(user_input)
