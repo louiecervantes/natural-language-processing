@@ -91,12 +91,10 @@ def app():
             
             pst.stem('winning'), pst.stem('studies'), pst.stem('buying')
             
-            # Get the user input
-            user_input = st.text_input("Enter a word to stem")
-
-            if st.button("Stem"):
-                output = pst.stem(user_input)
-            
+    # Get the user input
+    user_input = st.text_input("Enter a word to stem")
+    if st.button("Stem"):
+        output = pst.stem(user_input)
         st.write(output)
 
     
