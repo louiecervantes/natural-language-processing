@@ -83,6 +83,7 @@ def app():
             
     st.subheader('Stemming')
     with st.echo(code_location='below'): 
+        output = ''
         if st.button('Stemming'):
             #stemming
             from nltk.stem import PorterStemmer
@@ -93,11 +94,10 @@ def app():
             # Get the user input
             user_input = st.text_input("Enter a word to stem")
 
-            output = ''
             if st.button("Stem"):
                 output = pst.stem(user_input)
             
-            st.write(output)
+        st.write(output)
 
     
 
