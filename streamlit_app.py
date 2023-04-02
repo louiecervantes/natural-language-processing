@@ -42,7 +42,11 @@ def app():
             #freuency of tokens
             from nltk.probability import FreqDist
             fdist = FreqDist()
-            st.pyplot(fdist)
+            
+            for i in sentence_tokens:
+                fdist[i] = fdist[i] + 1
+                
+            st.write(fdist)    
             
     st.subheader('Tokenizer')
             
