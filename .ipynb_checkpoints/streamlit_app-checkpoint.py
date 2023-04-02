@@ -103,15 +103,15 @@ def app():
     st.subheader('Lemmatization')
 
     output = ''
-        if st.button('Lemmatization'):
-            with st.echo(code_location='below'): 
-            #lemmatization
-            from nltk.stem import wordnet
-            from nltk.stem import WordNetLemmatizer
-            lemmatizer = WordNetLemmatizer()
-            words_to_stem = ['cats', 'cacti', 'geese']
-            for i in words_to_stem:
-              st.write(i + ':' + lemmatizer.lemmatize(i))
+    if st.button('Lemmatization'):
+        with st.echo(code_location='below'): 
+        #lemmatization
+        from nltk.stem import wordnet
+        from nltk.stem import WordNetLemmatizer
+        lemmatizer = WordNetLemmatizer()
+        words_to_stem = ['cats', 'cacti', 'geese']
+        for i in words_to_stem:
+          st.write(i + ':' + lemmatizer.lemmatize(i))
          
 
  
