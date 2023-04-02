@@ -95,7 +95,8 @@ def app():
             # Add a button to update the data
             if st.button("Stem"):
                 output = pst.stem(user_input)
-                st.write(output)
+            
+            st.write(output)
 
     
 
