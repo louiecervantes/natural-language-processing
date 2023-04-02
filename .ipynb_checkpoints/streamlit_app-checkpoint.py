@@ -94,7 +94,8 @@ def app():
             user_input = st.text_input("Enter a word to stem")
             # Add a button to update the data
             if st.button("Stem"):
-                pst.stem(user_input)
+                output = pst.stem(user_input)
+                st.write(output)
 
     
 
