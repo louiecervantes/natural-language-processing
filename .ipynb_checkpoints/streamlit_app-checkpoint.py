@@ -3,7 +3,6 @@ import streamlit as st
 import altair as alt
 import nltk
 import nltk.corpus
-from nltk.tokenize import word_tokenize
 nltk.download('punkt')
 
 
@@ -32,8 +31,20 @@ def app():
         # Display the text when the user submits the form
         if st.button('Submit'):
             #Tokenizing
+            from nltk.tokenize import word_tokenize   
             sentence_tokens = word_tokenize(user_input)
             st.write(sentence_tokens)
+            
+            #checking the type and number of tokens
+            output = type(sentence_tokens), len(sentence_tokens)
+            st.write(output)
+            
+            #freuency of tokens
+            from nltk.probability import FreqDist
+            fdist = FreqDist()
+            st.pyplot(fdist)
+            
+    st.subheader('Tokenizer')
             
     
 
