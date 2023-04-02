@@ -113,7 +113,16 @@ def app():
             for i in words_to_stem:
                 output.append(i + ':' + lemmatizer.lemmatize(i))
             st.write(output)
-         
+            
+    from nltk.stem import wordnet
+    from nltk.stem import WordNetLemmatizer
+    lemmatizer = WordNetLemmatizer()
+    lemmatizer = WordNetLemmatizer()
+    # Get the user input
+    user_input = st.text_input("Enter a word to lemmatize")
+    if st.button("Lemmatize"):
+        output = lemmatizer.lemmatize(user_input)
+        st.write(output)        
 
  
 # run the app
