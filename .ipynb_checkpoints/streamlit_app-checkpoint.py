@@ -112,7 +112,7 @@ def app():
             words_to_stem = ['cats', 'cacti', 'geese']
             for i in words_to_stem:
                 output = i + ':' + lemmatizer.lemmatize(i)
-              st.write(output)
+            st.write(output)
          
 
  
