@@ -4,7 +4,7 @@ import altair as alt
 import nltk
 import nltk.corpus
 nltk.download('punkt')
-
+from nltk.tokenize import word_tokenize  
 
 # Define the Streamlit app
 def app():
