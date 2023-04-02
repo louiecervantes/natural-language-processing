@@ -81,7 +81,19 @@ def app():
             output = list(nltk.ngrams(sentence_tokens, 4))
             st.write(output)
             
+    st.subheader('Stemming')
+    with st.echo(code_location='below'): 
+        if st.button('Stemming'):
+            #stemming
+            from nltk.stem import PorterStemmer
+            pst = PorterStemmer()
             
+            pst.stem('winning'), pst.stem('studies'), pst.stem('buying')
+            
+            # Get the user input
+            user_input = st.text_input("Enter a word to stem")
+            pst.stem(user_input)
+
     
 
  
