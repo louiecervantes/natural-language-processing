@@ -45,9 +45,12 @@ def app():
             
             for i in sentence_tokens:
                 fdist[i] = fdist[i] + 1
-                
             st.write(fdist)    
-            
+           
+            #Ten most common token
+            top_10 = fdist.most_common(10)
+            st.write(top_10)
+
     st.subheader('Tokenizer')
             
     
