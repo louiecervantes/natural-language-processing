@@ -4,7 +4,7 @@ import altair as alt
 import nltk
 import nltk.corpus
 nltk.download('punkt')
-from nltk.stem import PorterStemmer
+
 
 # Define the Streamlit app
 def app():
@@ -91,7 +91,8 @@ def app():
             pst = PorterStemmer()
             
             pst.stem('winning'), pst.stem('studies'), pst.stem('buying')
-    
+            
+    from nltk.stem import PorterStemmer
     pst = PorterStemmer()
     # Get the user input
     user_input = st.text_input("Enter a word to stem")
