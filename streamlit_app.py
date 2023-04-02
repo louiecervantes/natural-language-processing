@@ -91,7 +91,8 @@ def app():
             pst = PorterStemmer()
             
             pst.stem('winning'), pst.stem('studies'), pst.stem('buying')
-            
+    
+    pst = PorterStemmer()
     # Get the user input
     user_input = st.text_input("Enter a word to stem")
     if st.button("Stem"):
