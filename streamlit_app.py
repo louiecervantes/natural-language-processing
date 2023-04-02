@@ -4,6 +4,7 @@ import altair as alt
 import nltk
 import nltk.corpus
 nltk.download('punkt')
+from nltk.stem import PorterStemmer
 
 # Define the Streamlit app
 def app():
