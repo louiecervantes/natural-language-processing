@@ -101,7 +101,7 @@ def app():
         st.write(output)
 
     st.subheader('Lemmatization')
-
+    st.write('Lemmatization is the process of reducing a word to its base or root form, known as a lemma. This is done to normalize words so that they can be analyzed and compared more easily. For example, the words "run," "running," and "ran" all have the same base form, "run," and so would be lemmatized to that word. Lemmatization is often used in natural language processing to improve the accuracy of text analysis and information retrieval systems.')
     output = []
     if st.button('Lemmatization'):
         with st.echo(code_location='below'): 
