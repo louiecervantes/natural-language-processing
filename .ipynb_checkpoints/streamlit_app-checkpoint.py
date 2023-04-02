@@ -101,9 +101,10 @@ def app():
         st.write(output)
 
     st.subheader('Lemmatization')
-    with st.echo(code_location='below'): 
+
         output = ''
         if st.button('Lemmatization'):
+            with st.echo(code_location='below'): 
             #lemmatization
             from nltk.stem import wordnet
             from nltk.stem import WordNetLemmatizer
