@@ -128,15 +128,7 @@ def app():
         
     st.subheader('POS Tagging') 
     st.write('POS tagging (Part-of-Speech tagging) is the process of labeling each word in a text corpus with its corresponding part of speech, such as noun, verb, adjective, adverb, preposition, pronoun, conjunction, interjection, or article.')
-    user_input = st.text_input("Enter a sentence")
-    pos_tags = []
-    if st.button("POS"):
-        from nltk.tokenize import word_tokenize
-        tokens = word_tokenize(user_input)
-        for i in tokens:
-            pos_tags.append(nltk.pos_tag([i]))
-        st.write(pos_tags)
-        
+   
     st.write('Meaning of the tags:')    
     meaning = ['CC coordinating conjunction', 
             'CD cardinal digit',
@@ -175,6 +167,15 @@ def app():
             'WRB wh-adverb, eg- where, when']
     for item in meaning:
         st.write(item)
+        
+    user_input = st.text_input("Enter a sentence")
+    pos_tags = []
+    if st.button("POS"):
+        from nltk.tokenize import word_tokenize
+        tokens = word_tokenize(user_input)
+        for i in tokens:
+            pos_tags.append(nltk.pos_tag([i]))
+        st.write(pos_tags)
      
 
  
