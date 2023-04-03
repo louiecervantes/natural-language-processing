@@ -130,10 +130,10 @@ def app():
     if st.button('Parts of Speech'):
         user_input = st.text_input("Enter a sentence")
         if st.button("POS"):
-            with st.echo(code_location='below'): 
-                tokens = word_tokenize(user_input)
-                for i in elon_tokens:
-                    st.write(nltk.pos_tag([i]))
+            from nltk.tokenize import word_tokenize
+            tokens = word_tokenize(user_input)
+            for i in elon_tokens:
+                st.write(nltk.pos_tag([i]))
      
 
  
