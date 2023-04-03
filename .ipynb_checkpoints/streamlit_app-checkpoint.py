@@ -132,8 +132,10 @@ def app():
         if st.button("POS"):
             from nltk.tokenize import word_tokenize
             tokens = word_tokenize(user_input)
+            pos_tags = []
             for i in elon_tokens:
-                st.write(nltk.pos_tag([i]))
+                pos_tags.append(nltk.pos_tag([i])
+                st.write(pos_tags)
      
 
  
