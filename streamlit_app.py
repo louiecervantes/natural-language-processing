@@ -134,7 +134,7 @@ def app():
             tokens = word_tokenize(user_input)
             pos_tags = []
             for i in elon_tokens:
-                pos_tags.append(nltk.pos_tag([i])
+                pos_tags.append(nltk.pos_tag([i]))
             st.write(pos_tags)
      
 
