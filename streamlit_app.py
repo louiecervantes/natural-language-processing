@@ -132,7 +132,7 @@ def app():
     if st.button("POS"):
         from nltk.tokenize import word_tokenize
         tokens = word_tokenize(user_input)
-        for i in okens:
+        for i in tokens:
             pos_tags.append(nltk.pos_tag([i]))
         st.write(pos_tags)
      
