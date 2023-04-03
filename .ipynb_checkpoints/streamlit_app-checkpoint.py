@@ -144,7 +144,7 @@ def app():
             'EX existential there (like: “there is” … think of it like “there exists”)',
             'FW foreign word',
             'IN preposition/subordinating conjunction',
-            'JJ adjective – "big",
+            'JJ adjective – "big"',
             'JJR adjective, comparative', 
             'JJS adjective, superlative',
             'LS list marker 1)',
