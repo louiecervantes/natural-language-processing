@@ -135,7 +135,7 @@ def app():
             pos_tags = []
             for i in elon_tokens:
                 pos_tags.append(nltk.pos_tag([i])
-                st.write(pos_tags)
+            st.write(pos_tags)
      
 
  
