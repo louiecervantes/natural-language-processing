@@ -32,10 +32,10 @@ def app():
               including procedural, object-oriented, and functional programming')
     
     # Create a multiline text field
-    user_input = st.text_area('Paste the block of text here', height=10)
-        
-    with st.echo(code_location='below'):
-        if st.button('Submit'):
+    user_input = st.text_area('Paste the block of text here', height=20)
+    
+    if st.button('Submit'):    
+        with st.echo(code_location='below'):
             #Tokenizing
             st.write('The list of tokens')
             from nltk.tokenize import word_tokenize   
@@ -62,6 +62,7 @@ def app():
             st.write(top_10)
 
     st.subheader('tokens, bigrams, trigrams and ngrams')
+    st.write('In natural language processing (NLP), bigrams and trigrams refer to sequences of two and three consecutive words in a text, respectively.  A bigram model considers the frequency of each pair of adjacent words in a corpus of text, while a trigram model considers the frequency of each triplet of adjacent words. These models are commonly used in tasks such as language modeling, where the goal is to predict the likelihood of a given sequence of words.')
     with st.echo(code_location='below'): 
         if st.button('bigrams, trigrams. ngrams'):
             #Tokens
@@ -83,6 +84,7 @@ def app():
             st.write(output)
             
     st.subheader('Stemming')
+    st.write('Stemming is a technique used in natural language processing (NLP) to reduce words to their base or root form, known as the stem. The purpose of stemming is to simplify the analysis of words by considering variations of a word as a single entity, rather than treating each variation separately.')
     with st.echo(code_location='below'): 
         output = ''
         if st.button('Stemming'):
@@ -121,7 +123,18 @@ def app():
     user_input = st.text_input("Enter a word to lemmatize")
     if st.button("Lemmatize"):
         output = lemmatizer.lemmatize(user_input)
-        st.write(output)        
+        st.write(output) 
+        
+    st.subheader('POS Tagging') 
+    st.write('POS tagging (Part-of-Speech tagging) is the process of labeling each word in a text corpus with its corresponding part of speech, such as noun, verb, adjective, adverb, preposition, pronoun, conjunction, interjection, or article.')
+    if st.button('Parts of Speech'):
+        with st.echo(code_location='below'): 
+            user_input = st.text_input("Enter a sentence")
+            if st.button("POS"):
+                tokens = word_tokenize(user_input)
+                for i in elon_tokens:
+                    st.write(nltk.pos_tag([i]))
+     
 
  
 # run the app
