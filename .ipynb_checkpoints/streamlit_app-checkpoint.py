@@ -128,9 +128,9 @@ def app():
     st.subheader('POS Tagging') 
     st.write('POS tagging (Part-of-Speech tagging) is the process of labeling each word in a text corpus with its corresponding part of speech, such as noun, verb, adjective, adverb, preposition, pronoun, conjunction, interjection, or article.')
     if st.button('Parts of Speech'):
-        with st.echo(code_location='below'): 
-            user_input = st.text_input("Enter a sentence")
-            if st.button("POS"):
+        user_input = st.text_input("Enter a sentence")
+        if st.button("POS"):
+            with st.echo(code_location='below'): 
                 tokens = word_tokenize(user_input)
                 for i in elon_tokens:
                     st.write(nltk.pos_tag([i]))
