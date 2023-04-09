@@ -186,7 +186,7 @@ def app():
         else:         
             return None
     
-    user_input2 = st.text_input('Enter a sentence', 'the cat is sitting with the bats on the striped mat under many flying geese')
+    user_input2 = st.text_input('Enter a sentence to POS tag:', 'the cat is sitting with the bats on the striped mat under many flying geese')
     pos_tags = []
     with st.echo(code_location='below'): 
         if st.button("get POS tags"):
@@ -215,7 +215,7 @@ def app():
     
     
     with st.echo(code_location='below'): 
-        user_input1 = st.text_input('Enter a sentence', 'the cat is sitting with the bats on the striped mat under many flying geese')
+        user_input1 = st.text_input('Enter a sentence to lemmatize:', 'the cat is sitting with the bats on the striped mat under many flying geese')
         if st.button("Use Spacy to lemmatize"):
             import spacy
             nlp = spacy.load('en_core_web_sm')
