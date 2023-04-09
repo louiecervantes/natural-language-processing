@@ -212,9 +212,10 @@ def app():
             lemmatized_sentence = " ".join(lemmatized_sentence)
             st.write('Lemmatized sentence: ' + lemmatized_sentence)  
  
-    user_input = st.text_input('Enter a sentence', 'the cat is sitting with the bats on the striped mat under many flying geese')
+    
     
     with st.echo(code_location='below'): 
+        user_input = st.text_input('Enter a sentence', 'the cat is sitting with the bats on the striped mat under many flying geese')
         if st.button("Use Spacy to lemmatize"):
             import spacy
             nlp = spacy.load('en_core_web_sm')
