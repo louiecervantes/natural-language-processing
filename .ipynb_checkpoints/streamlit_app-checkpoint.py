@@ -222,7 +222,7 @@ def app():
             nlp = spacy.load('en_core_web_sm')
 
             # Create a Doc object
-            doc = nlp(user_input)
+            doc = nlp(u''+ user_input)
 
             # Create list of tokens from given string
             tokens = []
@@ -231,7 +231,8 @@ def app():
             st.write('Tokens:')
             st.write(tokens)
             lemmatized_sentence = " ".join([token.lemma_ for token in doc])
-            st.write('Lemmatized sentence: ' + lemmatized_sentence)            
+            st.write('Lemmatized sentence: ' + lemmatized_sentence)
+    st.write('')
 
 # run the app
 if __name__ == "__main__":
