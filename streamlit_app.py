@@ -186,7 +186,7 @@ def app():
         else:         
             return None
     
-    user_input = st.text_input('Enter a sentence', 'the cat is sitting with the bats on the striped mat under many flying geese')
+    user_input2 = st.text_input('Enter a sentence', 'the cat is sitting with the bats on the striped mat under many flying geese')
     pos_tags = []
     with st.echo(code_location='below'): 
         if st.button("get POS tags"):
@@ -195,7 +195,7 @@ def app():
             lemmatizer = WordNetLemmatizer()
             # tokenize the sentence and find the POS tag for each token
             st.write('POS tagged:')
-            pos_tagged = pos_tag(word_tokenize(user_input)) 
+            pos_tagged = pos_tag(word_tokenize(user_input2)) 
             st.write(pos_tagged)
             st.write('Wordnet tagged:')
             wordnet_tagged = list(map(lambda x: (x[0], pos_tagger(x[1])), pos_tagged))
