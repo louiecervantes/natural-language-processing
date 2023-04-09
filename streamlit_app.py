@@ -199,7 +199,8 @@ def app():
             st.write(pos_tagged)
             st.write('Wordnet tagged:')
             wordnet_tagged = list(map(lambda x: (x[0], pos_tagger(x[1])), pos_tagged))
-            print(wordnet_tagged)
+            st.write('Wordnet tagged:')
+            st.write(wordnet_tagged)
             lemmatized_sentence = []
             for word, tag in wordnet_tagged:
                 if tag is None:
@@ -209,7 +210,7 @@ def app():
                     # else use the tag to lemmatize the token
                     lemmatized_sentence.append(lemmatizer.lemmatize(word, tag))
             lemmatized_sentence = " ".join(lemmatized_sentence)
-
+            st.write('Lemmatized sentence')
             st.write(lemmatized_sentence)        
 
 
