@@ -118,15 +118,16 @@ def app():
             st.write(output)
             
     # Get the user input
-    user_input = st.text_input("Enter a word to lemmatize")
+    user_input = st.text_input("Enter a sentence to lemmatize", 'the cat is sitting with the bats on the striped mat under many flying geese')
     if st.button("Lemmatize"):
         nltk.download('wordnet')
         nltk.download('averaged_perceptron_tagger')
         from nltk.stem import wordnet
         from nltk.stem import WordNetLemmatizer
         lemmatizer = WordNetLemmatizer()
-        output = lemmatizer.lemmatize(user_input)
-        st.write(output) 
+        wordlist = nltk.word_tokenize(user_input)
+        lemmatized_string = ' '.join([lemmatizer.lemmatize(words) for words in wordlist])
+        st.write(lemmatized_string) 
         
     st.subheader('POS Tagging') 
     st.write('POS tagging (Part-of-Speech tagging) is the process of labeling each word in a text corpus with its corresponding part of speech, such as noun, verb, adjective, adverb, preposition, pronoun, conjunction, interjection, or article.')
