@@ -189,10 +189,11 @@ def app():
     pos_tags = []
     with st.echo(code_location='below'): 
         if st.button("get POS tags"):
-            from nltk.tokenize import word_tokenize
+            from nltk import pos_tag, word_tokenize
+            #from nltk.tokenize import word_tokenize
             # tokenize the sentence and find the POS tag for each token
             st.write('POS tagged:')
-            pos_tagged = nltk.pos_tag(nltk.word_tokenize(user_input)) 
+            pos_tagged = pos_tag(word_tokenize(user_input)) 
             st.write(pos_tagged)
             st.write('Wordnet tagged:')
             wordnet_tagged = list(map(lambda x: (x[0], pos_tagger(x[1])), pos_tagged))
