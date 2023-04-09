@@ -191,7 +191,8 @@ def app():
     with st.echo(code_location='below'): 
         if st.button("get POS tags"):
             from nltk import pos_tag, word_tokenize
-            #from nltk.tokenize import word_tokenize
+            from nltk.stem import WordNetLemmatizer
+            lemmatizer = WordNetLemmatizer()
             # tokenize the sentence and find the POS tag for each token
             st.write('POS tagged:')
             pos_tagged = pos_tag(word_tokenize(user_input)) 
