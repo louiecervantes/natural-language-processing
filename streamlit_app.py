@@ -218,6 +218,7 @@ def app():
         user_input1 = st.text_input('Enter a sentence to lemmatize:', 'the cat is sitting with the bats on the striped mat under many flying geese')
         if st.button("Use Spacy to lemmatize"):
             import spacy
+            spacy.cli.download("en_core_web_sm")
             nlp = spacy.load('en_core_web_sm')
 
             # Create a Doc object
