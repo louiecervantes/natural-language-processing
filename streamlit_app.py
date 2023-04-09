@@ -210,8 +210,7 @@ def app():
                     # else use the tag to lemmatize the token
                     lemmatized_sentence.append(lemmatizer.lemmatize(word, tag))
             lemmatized_sentence = " ".join(lemmatized_sentence)
-            st.write('Lemmatized sentence')
-            st.write(lemmatized_sentence)        
+            st.write('Lemmatized sentence: ' + lemmatized_sentence)        
 
 
  
