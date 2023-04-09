@@ -210,10 +210,27 @@ def app():
                     # else use the tag to lemmatize the token
                     lemmatized_sentence.append(lemmatizer.lemmatize(word, tag))
             lemmatized_sentence = " ".join(lemmatized_sentence)
-            st.write('Lemmatized sentence: ' + lemmatized_sentence)        
-
-
+            st.write('Lemmatized sentence: ' + lemmatized_sentence)  
  
+    user_input = st.text_input('Enter a sentence', 'the cat is sitting with the bats on the striped mat under many flying geese')
+    
+    with st.echo(code_location='below'): 
+        if st.button("Use Spacy to lemmatize"):
+            import spacy
+            nlp = spacy.load('en_core_web_sm')
+
+            # Create a Doc object
+            doc = nlp(user_input)
+
+            # Create list of tokens from given string
+            tokens = []
+            for token in doc:
+                tokens.append(token)
+            st.write('Tokens:')
+            st.write(tokens)
+            lemmatized_sentence = " ".join([token.lemma_ for token in doc])
+            st.write('Lemmatized sentence: ' + lemmatized_sentence)            
+
 # run the app
 if __name__ == "__main__":
     app()
