@@ -173,7 +173,7 @@ def app():
     
     # POS_TAGGER_FUNCTION : TYPE 1
     def pos_tagger(nltk_tag):
-        import nltk.stem.wordnet
+        from nltk.corpus import wordnet
         from nltk import pos_tag, word_tokenize
         if nltk_tag.startswith('J'):
             return wordnet.ADJ
