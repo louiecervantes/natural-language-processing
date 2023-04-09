@@ -120,6 +120,8 @@ def app():
     # Get the user input
     user_input = st.text_input("Enter a word to lemmatize")
     if st.button("Lemmatize"):
+        nltk.download('wordnet')
+        nltk.download('averaged_perceptron_tagger')
         from nltk.stem import wordnet
         from nltk.stem import WordNetLemmatizer
         lemmatizer = WordNetLemmatizer()
