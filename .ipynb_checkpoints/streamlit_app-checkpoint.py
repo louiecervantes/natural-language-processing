@@ -215,14 +215,14 @@ def app():
     
     
     with st.echo(code_location='below'): 
-        user_input1 = st.text_input('Enter a sentence to lemmatize:', 'the cat is sitting with the bats on the striped mat under many flying geese')
+        user_input = st.text_input('Enter a sentence to lemmatize:', 'the bats saw the cats with best stripes hanging upside down by their feet')
         if st.button("Use Spacy to lemmatize"):
             import spacy
             spacy.cli.download("en_core_web_sm")
             nlp = spacy.load('en_core_web_sm')
 
             # Create a Doc object
-            doc = nlp(user_input1)
+            doc = nlp(user_input)
 
             # Create list of tokens from given string
             tokens = []
